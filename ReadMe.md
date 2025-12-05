@@ -35,7 +35,8 @@ Pour calculer la position de ce point de l’image à l’écran selon un zoom d
 
 Nous savons que nous allons faire « bouger » le repère, donc il vaut mieux expliciter la position de l’origine. En réalité :
 
-$$ \tag{A} x_{écran} = (x +x_{origine}) · zoom
+$$ \tag{A}
+x_{écran} = (x +x_{origine}) · zoom
 $$
 
 avec de base $x_{origine} = 0$, on retombe sur la première formule.
@@ -54,7 +55,8 @@ $$
 
 Si on positionne l’origine sur un point x de l’image, on  a :
 
-$$\tag{B} x_{souris} = \frac{mx}{zoom} - x
+$$\tag{B}
+x_{souris} = \frac{mx}{zoom} - x
 $$
 
 Plus précisément, si, comme sur le schéma ci-dessus $x$ est un point référence de l’image, et que la souris est à une position décalée de ce point (x + dx) la formule est :
