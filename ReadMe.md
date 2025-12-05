@@ -17,7 +17,8 @@ Quand on passe du repère `old_zoom` -> `new_zoom` il faut que :
 
 Mon intuition c’est que la fonction `love.graphics.scale()` est juste une homothétie (multiplication par une matrice (2×2) : 
 
-$$\begin{bmatrix}Sx & 0\\0 & Sy\end{bmatrix}
+$$\begin{bmatrix}Sx & 0 \\\
+0 & Sy\end{bmatrix}
 $$
 
 Elle « dilate » le repère selon des facteurs $Sx$ et $Sy$ (suivant les axes respectifs $x$ et $y$), et est centrée sur l’origine : si le repère est centré sur la figure cette figure grossirait/diminurait sans bouger, par contre si elle est pas centrée de fait le « zoom » provoque une translation de la figure également.
