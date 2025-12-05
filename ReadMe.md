@@ -34,22 +34,28 @@ Soit $(x, y)$ un point de l’image (on va juste raisonner avec $x$, ce sera la 
 Pour calculer la position de ce point de l’image à l’écran selon un zoom donné, on a : $x_{écran} = x · zoom$  (même si tu ne joue pas avec ta molette on est forcément dans un état « zoomé », la position neutre de départ pouvant être par exemple $zoom = 1$).
 
 Nous savons que nous allons faire « bouger » le repère, donc il vaut mieux expliciter la position de l’origine. En réalité :
-$ \tag{A} x_{écran} = (x +x_{origine}) · zoom $
+
+$$ \tag{A} x_{écran} = (x +x_{origine}) · zoom
+$$
+
 avec de base $x_{origine} = 0$, on retombe sur la première formule.
 
 ### Coordonnées de la souris
 
 `love.mouse.getPosition()` nous donne la position `mx` de la souris à l’écran (donc dans l’espace déjà zoomé). Il faut donc calculer sa position dans le repère de l’image (comme si on n’avait pas zoomé). on peut le faire en appliquant la formule ci-dessus dans le cas de la souris :
 
-$ mx = (x_{souris}  + x_{origine}) . zoom $
+$$ mx = (x_{souris}  + x_{origine}) . zoom
+$$
 
 $ x_{souris}$ étant le point correspondant à la position de la souris dans le repère de l’image à afficher. De là on calcule facilement :
 
-$ x_{souris} = \frac{mx}{zoom} - x_{origine} $
+$$ x_{souris} = \frac{mx}{zoom} - x_{origine} 
+$$
 
 Si on positionne l’origine sur un point x de l’image, on  a :
 
-$\tag{B} x_{souris} = \frac{mx}{zoom} - x$
+$$\tag{B} x_{souris} = \frac{mx}{zoom} - x
+$$
 
 Plus précisément, si, comme sur le schéma ci-dessus $x$ est un point référence de l’image, et que la souris est à une position décalée de ce point (x + dx) la formule est :
 
