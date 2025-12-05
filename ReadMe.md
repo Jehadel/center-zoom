@@ -70,19 +70,23 @@ $$ dx = \frac{x_{souris}}{zoom} - x
 $$
 $$ \text{Nous allons calculer la position après un nouveau zoom, pour distinguer appelons cette position de départ :}
 $$
-$$ dx = \frac{x_{souris}}{old\_zoom} - x
+$$ dx = \frac{x_{souris}}{oldZoom} - x
 $$
 
 Écrivons la situation après avoir fait un `new_zoom`. On veut aussi que `mx` soit invariant dans le nouveau zoom !  `mx` n’a pas changé, mais on peut regarder à quoi correspond sa position dans l’image nouvellement zoomée.  On veut aussi conserver `dx` (il ne change que proportionnelement, d’un facteur `new_zoom`), mais trouver la nouvelle position $x_{new}$ du point $x$ du repère `old_zoom` car ce point se sera translaté pendant le zoom (en gros tout le reste est constant).
 
 Dans ce repère `new_zoom` on peut aussi exprimer la position `mx` de la souris :
+$$mx = (x_{nouveau} + dx) · newZoom
 $$
-mx = (x_{nouveau} + dx) · new\_zoom \\
-mx = x_{nouveau} · new\_zoom + dx . new\_zoom \\
-\text{on peut remplacer }dx\text{ – qui n’a pas changé – par la formule (C) vu ci-dessus :} \\
-mx = x_{nouveau} · new\_zoom + \frac{x_{souris}}{old\_zoom} - x . new\_zoom \\
-\text{et à partir de là on peut exprimer }x_{nouveau} : \\
-x_{nouveau} = \frac{mx}{new\_zoom} - (\frac{mx}{ancien\_zoom} - x)
+$$mx = x_{nouveau} · new\_zoom + dx . newZoom
+$$
+$$\text{on peut remplacer }dx\text{ – qui n’a pas changé – par la formule (C) vu ci-dessus :} \\
+$$
+$$mx = x_{nouveau} · new\_zoom + \frac{x_{souris}}{old\\_zoom} - x . new\_zoom \\
+$$
+$$\text{et à partir de là on peut exprimer }x_{nouveau} : \\
+$$
+$$x_{nouveau} = \frac{mx}{new\_zoom} - (\frac{mx}{ancien\_zoom} - x)
 $$
 
 
