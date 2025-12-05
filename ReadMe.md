@@ -59,12 +59,18 @@ $$
 
 Plus précisément, si, comme sur le schéma ci-dessus $x$ est un point référence de l’image, et que la souris est à une position décalée de ce point (x + dx) la formule est :
 
-$$x_{souris} = (x + dx) · zoom \\\
-x_{souris} = x · zoom + dx · zoom \\\
-\text{d’où on peut tirer :} \\\
-dx = \frac{x_{souris}}{zoom} - x \\\
-\text{Nous allons calculer la position après un nouveau zoom, pour distinguer appelons cette position de départ :} \\\
-dx = \frac{x_{souris}}{old\_zoom} - x
+$$x_{souris} = (x + dx) · zoom
+$$
+
+$$x_{souris} = x · zoom + dx · zoom
+$$
+$$ \text{d’où on peut tirer :}
+$$
+$$ dx = \frac{x_{souris}}{zoom} - x
+$$
+$$ \text{Nous allons calculer la position après un nouveau zoom, pour distinguer appelons cette position de départ :}
+$$
+$$ dx = \frac{x_{souris}}{old\_zoom} - x
 $$
 
 Écrivons la situation après avoir fait un `new_zoom`. On veut aussi que `mx` soit invariant dans le nouveau zoom !  `mx` n’a pas changé, mais on peut regarder à quoi correspond sa position dans l’image nouvellement zoomée.  On veut aussi conserver `dx` (il ne change que proportionnelement, d’un facteur `new_zoom`), mais trouver la nouvelle position $x_{new}$ du point $x$ du repère `old_zoom` car ce point se sera translaté pendant le zoom (en gros tout le reste est constant).
