@@ -1,4 +1,4 @@
-![Schema](/home/jean/Nextcloud-perso/DVP/LOVE2D/Zoom-scale/schema.png)
+![Schema](./schema.png)
 
 
 
