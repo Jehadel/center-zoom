@@ -51,5 +51,4 @@ function love.draw()
     
     -- Afficher le niveau de zoom
     love.graphics.print("Zoom: " .. string.format("%.1f", zoom), 10, 10)
-    love.graphics.print("Method: no translate", 10, 30)
 end
