@@ -90,7 +90,7 @@ $$
 $$\text{on peut remplacer }dx\text{ – qui n’a pas changé – par la formule (C) vu ci-dessus :}
 $$
 
-$$mx = x_{nouveau} · newZoom + \frac{mx}{oldZoom} - x . newZoom \\
+$$mx = x_{nouveau} · newZoom + (\frac{mx}{oldZoom} - x) . newZoom \\
 $$
 
 $$\text{et à partir de là on peut exprimer }x_{nouveau} : \\
